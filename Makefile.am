@@ -3,23 +3,23 @@
 #
 # Copyright (C) 2024 Victor Santos <victor_santos@fisica.ufc.br>
 #
-# This file is part of guile-hello.
+# This file is part of guile-scmutils.
 #
-# guile-hello is free software: you can redistribute it and/or modify
+# guile-scmutils is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3 of the License, or
 # (at your option) any later version.
 #
-# guile-hello is distributed in the hope that it will be useful, but
+# guile-scmutils is distributed in the hope that it will be useful, but
 # WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 # General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with guile-hello. If not, see https://www.gnu.org/licenses/.
+# along with guile-scmutils. If not, see https://www.gnu.org/licenses/.
 #
 
-SUBDIRS = hello tests
+SUBDIRS = scmutils tests
 
 ACLOCAL_AMFLAGS = -I build-aux
 
@@ -38,7 +38,7 @@ SUFFIXES = .scm .go
 .scm.go:
 	$(top_builddir)/env $(GUILD) compile $(GUILE_TARGET) $(GUILE_WARNINGS) -o "$@" "$<"
 
-SOURCES = hello.scm
+SOURCES = scmutils.scm
 
 CLEANFILES = $(GOBJECTS)
 
